@@ -1,4 +1,4 @@
-import { injectable } from 'tsyringe'
+import { injectable } from '../../../frameworks/di'
 import { KnexDatabase } from '../../../frameworks/database/database'
 import { KnexRepositoryHelper } from '../../../frameworks/database/repository-helper'
 import { TableName } from '../../../frameworks/database/tables'

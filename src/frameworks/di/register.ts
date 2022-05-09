@@ -1,6 +1,6 @@
 import { ClinicRepositoryImpl } from '../../adapters/repository/clinic/clinic.repository'
 import { TYPES } from './types'
-import { container } from 'tsyringe'
+import { container } from '../di'
 import { KnexDatabase } from '../database/database'
 import { testDatabase } from '../../__fixtures__/database.fixtures'
 import { productionDatabase } from '../../adapters/repository/respository'

@@ -1,6 +1,6 @@
 
 import { Request, Response } from 'express'
-import { injectable } from 'tsyringe'
+import { injectable } from '../../../frameworks/di'
 import { ClinicCreateInput } from '../../../usecases/clinic/clinic.interface'
 import { ClinicCase } from '../../../usecases/clinic/clinic.usecase'
 
