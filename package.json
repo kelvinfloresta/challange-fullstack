@@ -4,6 +4,7 @@
   "description": "O objetivo deste desafio é avaliarmos o seu domínio em desenvolvimento fullstack, ou seja, sua organização, boas práticas com o código, criação e consumo de APIs Restfull, conhecimento dos frameworks e tecnologias utilizadas.",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/main.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +27,8 @@
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.16",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
   },
   "dependencies": {
