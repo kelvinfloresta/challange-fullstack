@@ -33,4 +33,13 @@ describe('Clinic Case', () => {
       expect(found).toMatchObject(newClinic)
     })
   })
+
+  describe('getById', () => {
+    it('Should return undefined if not found', async () => {
+      const sut = makeSut()
+      const NON_EXISTENT_ID = '00000000-0000-0000-0000-000000000000'
+      const clinic = await sut.getById(NON_EXISTENT_ID)
+      expect(clinic).toBeUndefined()
+    })
+  })
 })
