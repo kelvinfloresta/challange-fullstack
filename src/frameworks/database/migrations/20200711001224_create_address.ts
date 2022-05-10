@@ -5,7 +5,6 @@ import { TableName } from '../tables'
 export async function up (knex: Knex): Promise<any> {
   return await knex.schema.createTable(TableName.addresses, (table) => {
     table.uuid('id').primary().defaultTo(KnexDatabase.postgresUUIDV4(knex))
-    table.string('name').notNullable()
     table.string('country').notNullable()
     table.string('state').notNullable()
     table.string('city').notNullable()
