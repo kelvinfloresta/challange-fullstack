@@ -1,4 +1,4 @@
-import { CreateRepository, Id } from '../repository.interface'
+import { CreateRepository, GetByIdRepository, Id } from '../repository.interface'
 
 export interface ClinicBusinessData extends Id {
   readonly name: string
@@ -18,6 +18,7 @@ export interface ClinicBusinessData extends Id {
 
 export type CreateClinicRepositoryInput = Pick<ClinicBusinessData, 'name' | 'document' | 'address'>
 
-export interface ClinicRepository
-  extends CreateRepository<CreateClinicRepositoryInput>
+export interface ClinicRepository extends
+  CreateRepository<CreateClinicRepositoryInput>,
+  GetByIdRepository<ClinicBusinessData>
 { }
