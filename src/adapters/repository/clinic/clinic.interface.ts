@@ -16,6 +16,8 @@ export interface ClinicBusinessData extends Id {
   }
 }
 
-type CreateInput = Pick<ClinicBusinessData, 'name' | 'document' | 'address'>
+export type CreateClinicRepositoryInput = Pick<ClinicBusinessData, 'name' | 'document' | 'address'>
 
-export interface ClinicRepository extends CreateRepository<CreateInput> { }
+export interface ClinicRepository
+  extends CreateRepository<CreateClinicRepositoryInput>
+{ }
