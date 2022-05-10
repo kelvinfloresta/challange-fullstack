@@ -8,6 +8,7 @@ export class KnexDatabase {
 
   constructor (private readonly config: Knex.Config) {
     this.allTables = Object.values(TableName)
+    this.connection = knex({ client: config.client })
   }
 
   async connect () {
