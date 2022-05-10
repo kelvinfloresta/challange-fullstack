@@ -1,10 +1,9 @@
 import { Knex } from 'knex'
 import { KnexDatabase } from '../database'
-
-const tableName = 'addresses'
+import { TableName } from '../tables'
 
 export async function up (knex: Knex): Promise<any> {
-  return await knex.schema.createTable(tableName, (table) => {
+  return await knex.schema.createTable(TableName.clinics, (table) => {
     table.uuid('id').primary().defaultTo(KnexDatabase.postgresUUIDV4(knex))
     table.string('name').notNullable()
     table.string('document').notNullable()
@@ -12,5 +11,5 @@ export async function up (knex: Knex): Promise<any> {
 }
 
 export async function down (knex: Knex): Promise<any> {
-  return await knex.schema.dropTable(tableName)
+  return await knex.schema.dropTable(TableName.clinics)
 }
