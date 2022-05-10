@@ -7,6 +7,8 @@ export async function up (knex: Knex): Promise<any> {
     table.uuid('id').primary().defaultTo(KnexDatabase.postgresUUIDV4(knex))
     table.string('name').notNullable()
     table.string('document').notNullable()
+    table.uuid('addressId').notNullable()
+    table.foreign('addressId').references('id').inTable(TableName.addresses)
   })
 }
 
