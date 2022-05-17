@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node src/main.ts",
     "test": "jest",
+    "test:unit": "npm test -- -c jest-unit.config.js",
     "test:integration": "npm test -- --runInBand -c jest-integration.config.js"
   },
   "repository": {
